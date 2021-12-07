@@ -1,13 +1,18 @@
 import sql
 from pgsql import query
+import insert
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # insert data
-    query(sql.test_insert, ["My Insert!"]);
 
-    # select data
-    results = query(sql.test_select);
-    print("results: ", results)
+     query(sql.create_schema)
+     query(sql.create_table)
+     insert.all()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+    #select data
+    #results = query(sql.test_select);
+    #print("results: ", results)
+
+
+ #See PyCharm help at https://www.jetbrains.com/help/pycharm/
